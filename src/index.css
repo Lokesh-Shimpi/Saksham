@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Government Schemes Website Design System - Accessible, Rural-Friendly Design 
+All colors MUST be HSL. Warm, trustworthy palette for rural audiences.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clean, accessible whites and grays */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 8%;
+
+    /* Card system with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Government saffron-inspired primary colors */
+    --primary: 22 93% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 25 95% 68%;
+    --primary-dark: 20 90% 48%;
+
+    /* Trust-building blue secondary */
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 220 95% 70%;
+
+    /* Success green for completed actions */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 80% 46%;
+
+    /* Warm, accessible muted tones */
+    --muted: 30 10% 96%;
+    --muted-foreground: 25 5% 45%;
+
+    /* Soft accent for highlights */
+    --accent: 45 100% 92%;
+    --accent-foreground: 25 25% 25%;
+
+    /* Warning colors for attention */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Destructive actions */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 25 15% 88%;
+    --input: 25 15% 94%;
+    --ring: 22 93% 58%;
+
+    /* Gradients for visual appeal */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-warm: linear-gradient(45deg, hsl(var(--primary-light)), hsl(var(--accent)));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Typography scale for accessibility */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - warm, comfortable for evening use */
+    --background: 240 8% 8%;
+    --foreground: 30 5% 95%;
+
+    --card: 240 8% 10%;
+    --card-foreground: 30 5% 95%;
+
+    --popover: 240 8% 10%;
+    --popover-foreground: 30 5% 95%;
+
+    --primary: 25 95% 65%;
+    --primary-foreground: 240 8% 8%;
+    --primary-light: 28 98% 75%;
+    --primary-dark: 22 85% 55%;
+
+    --secondary: 220 95% 65%;
+    --secondary-foreground: 240 8% 8%;
+    --secondary-light: 223 98% 75%;
+
+    --success: 145 80% 45%;
+    --success-foreground: 240 8% 8%;
+    --success-light: 148 85% 55%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 30 5% 65%;
+
+    --accent: 45 85% 25%;
+    --accent-foreground: 30 5% 95%;
+
+    --warning: 40 95% 55%;
+    --warning-foreground: 240 8% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 30 5% 95%;
+
+    --border: 240 6% 20%;
+    --input: 240 6% 18%;
+    --ring: 25 95% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-warm: linear-gradient(45deg, hsl(var(--primary-light)), hsl(var(--accent)));
+
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+    --shadow-strong: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Accessibility improvements for rural users */
+  .high-contrast {
+    --primary: 22 100% 40%;
+    --secondary: 217 100% 40%;
+    --border: 0 0% 60%;
+  }
+
+  /* Large text mode for low literacy users */
+  .large-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .large-text h1 { font-size: 2.5rem; }
+  .large-text h2 { font-size: 2rem; }
+  .large-text h3 { font-size: 1.75rem; }
+  .large-text .text-sm { font-size: 1.125rem; }
+  .large-text .text-xs { font-size: 1rem; }
+
+  /* Voice interaction indicators */
+  .voice-active {
+    animation: pulse-voice 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-voice {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  /* Focus styles for keyboard navigation */
+  .focus-visible:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Utility classes for the design system */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Rural-friendly button styles */
+  .btn-large {
+    @apply px-8 py-4 text-lg font-semibold rounded-lg min-h-[3rem] transition-smooth;
+  }
+
+  .btn-icon {
+    @apply p-3 rounded-full transition-smooth;
+  }
+
+  /* Card styles for scheme listings */
+  .scheme-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-medium transition-smooth;
+  }
+
+  .scheme-card:hover {
+    transform: translateY(-2px);
+  }
+}
